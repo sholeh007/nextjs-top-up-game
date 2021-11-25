@@ -1,6 +1,7 @@
 import "../styles/homepage.css";
 import "../styles/utilities.css";
 import "../styles/detail.css";
+import "../styles/checkout.css";
 import "aos/dist/aos.css";
 import type { AppProps } from "next/app";
 import Script from "next/script";
