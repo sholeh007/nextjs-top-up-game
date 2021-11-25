@@ -4,6 +4,7 @@ import "../styles/detail.css";
 import "../styles/checkout.css";
 import "../styles/complete-checkout.css";
 import "../styles/sign-in.css";
+import "../styles/sign-up.css";
 import "aos/dist/aos.css";
 import type { AppProps } from "next/app";
 import Script from "next/script";
