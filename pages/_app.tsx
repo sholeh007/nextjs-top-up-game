@@ -8,6 +8,8 @@ import "../styles/sign-up.css";
 import "../styles/sign-up-photo.css";
 import "../styles/sign-up-success.css";
 import "../styles/404-not-found.css";
+import "../styles/overview.css";
+import "../styles/sidebar.css";
 import "aos/dist/aos.css";
 import type { AppProps } from "next/app";
 import Script from "next/script";
