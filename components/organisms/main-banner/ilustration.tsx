@@ -12,6 +12,7 @@ export default function Ilustration() {
             width={500}
             height={500}
             className="img-fluid"
+            priority={true}
           />
           <div className="card left-card position-absolute border-0">
             <div className="d-flex align-items-center mb-16 gap-3">
