@@ -1,7 +1,9 @@
 import GameItems from "../../molecules/game-items";
-import { GameList } from "./game-list";
+import GameList from "./game-list";
 
 export default function FeatureGames() {
+  const gameList = GameList();
+
   return (
     <section className="featured-game pt-50 pb-50">
       <div className="container-fluid">
@@ -13,7 +15,7 @@ export default function FeatureGames() {
           className="d-flex flex-row flex-lg-wrap overflow-setting justify-content-lg-between gap-lg-3 gap-4"
           data-aos="fade-up"
         >
-          {GameList.map((item, i) => (
+          {gameList.map((item, i) => (
             <div key={i}>
               <GameItems
                 id={item.id}

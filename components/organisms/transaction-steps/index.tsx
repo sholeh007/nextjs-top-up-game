@@ -2,6 +2,8 @@ import StepItem from "../../molecules/step-item";
 import { ListTransaction } from "./list-transaction";
 
 export default function TransactionSteps() {
+  const lists = ListTransaction();
+
   return (
     <section id="feature" className="feature pt-50 pb-50">
       <div className="container-fluid">
@@ -10,7 +12,7 @@ export default function TransactionSteps() {
           <br /> Easy to Win the Game
         </h2>
         <div className="row gap-lg-0 gap-4" data-aos="fade-up">
-          {ListTransaction.map((list) => (
+          {lists.map((list) => (
             <div key={list.icon} className="col-lg-4">
               <StepItem
                 icon={list.icon}

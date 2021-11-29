@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { MenuProfile } from "../menu-profile";
+import MenuProfile from "../menu-profile";
 import Link from "next/link";
 
 interface login {
@@ -7,6 +7,8 @@ interface login {
 }
 
 export default function authProfile({ isLogin }: login) {
+  const menuProfile = MenuProfile();
+
   return (
     <>
       {!isLogin ? (
@@ -46,7 +48,7 @@ export default function authProfile({ isLogin }: login) {
               className="dropdown-menu border-0"
               aria-labelledby="dropdownMenuLink"
             >
-              {MenuProfile.map((item, i) => (
+              {menuProfile.map((item, i) => (
                 <li key={i}>
                   <Link href={item.link} passHref>
                     <a className="dropdown-item text-lg color-palette-2">
