@@ -1,10 +1,8 @@
 import ReachedItem from "../../molecules/reached-item";
-import ReachedList from "./reached-list";
+import { ReachedList } from "./reached-list";
 import { Fragment } from "react";
 
 export default function Reached() {
-  const list = ReachedList();
-
   return (
     <section className="reached pt-50 pb-50">
       <div className="container-fluid">
@@ -17,7 +15,7 @@ export default function Reached() {
               Players Top Up
             </p>
           </div>
-          {list.map((item, i) => (
+          {ReachedList.map((item, i) => (
             <Fragment key={i}>
               <ReachedItem title={item.title} content={item.content} />
             </Fragment>
