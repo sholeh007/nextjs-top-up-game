@@ -1,3 +1,4 @@
+import Link from "next/link";
 import Image from "next/image";
 import cx from "classnames";
 
@@ -11,10 +12,11 @@ interface PropsType {
     | "reward"
     | "setting"
     | "power";
+  link: string;
   active?: boolean;
 }
 
-export default function MenuItem({ title, icon, active }: Partial<PropsType>) {
+export default function MenuItem({ title, icon, active, link }: PropsType) {
   const classItem = cx({
     item: true,
     "mb-30": true,
@@ -27,9 +29,9 @@ export default function MenuItem({ title, icon, active }: Partial<PropsType>) {
         <Image src={`/icon/${icon}.svg`} height={25} width={25} alt="" />
       </div>
       <p className="item-title m-0">
-        <a href="" className="text-lg text-decoration-none">
-          {title}
-        </a>
+        <Link href={link} passHref>
+          <a className="text-lg text-decoration-none">{title}</a>
+        </Link>
       </p>
     </div>
   );
