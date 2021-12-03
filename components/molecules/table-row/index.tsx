@@ -1,6 +1,7 @@
 import cx from "classnames";
 import Image from "next/image";
-import FormatCurrency from "../../../../lib/format-currency";
+import FormatCurrency from "../../../lib/format-currency";
+import Link from "next/link";
 
 interface propsType {
   title: string;
@@ -9,6 +10,7 @@ interface propsType {
   price: number;
   status: "pending" | "failed" | "success";
   image: string;
+  action?: boolean;
 }
 
 export default function TableRow({
@@ -18,6 +20,7 @@ export default function TableRow({
   price,
   status,
   image,
+  action,
 }: propsType) {
   const statusClass = cx("float-start", "icon-status", {
     pending: status === "pending",
@@ -56,6 +59,13 @@ export default function TableRow({
           </p>
         </div>
       </td>
+      {action && (
+        <td>
+          <Link href="/member/transactions/detail" passHref>
+            <a className="btn btn-status rounded-pill text-sm">Details</a>
+          </Link>
+        </td>
+      )}
     </tr>
   );
 }
