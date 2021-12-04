@@ -10,7 +10,7 @@ export default function CheckoutItem() {
             className="img-fluid"
             alt=""
             width={200}
-            height={160}
+            height={130}
           />
         </div>
       </div>
