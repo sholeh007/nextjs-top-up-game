@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 
-interface GameProps {
+export interface GameProps {
   id: number;
   link: string;
   image: string;

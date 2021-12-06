@@ -1,4 +1,4 @@
-interface propTypes {
+export interface propTypes {
   name: string;
   type: string;
   placeholder?: string;
